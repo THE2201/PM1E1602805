@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">PM1E1602805</string>
+    <string name="tagCapturar">Capturar</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnLista">Ver lista</string>
+    <string name="tagNombre">Nombre</string>
+    <string name="tagNota">Agregar nota</string>
     <string name="btnbuscar">Volver</string>
     <string name="btnRegresar">Regresar</string>
     <string name="btnCompartir">Compartir</string>
