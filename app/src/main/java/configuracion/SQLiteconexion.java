@@ -15,7 +15,7 @@ public class SQLiteconexion   extends  SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TransContactos.CreateTablaContactos);
-        db.execSQL(TransPaises.CreateTablaContactos);
+        db.execSQL(TransPaises.CreateTablaPaises);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

@@ -13,7 +13,7 @@ public class TransPaises {
     public static final String ext = "ext";
 
 
-    public static final String CreateTablaContactos = "CREATE TABLE " + TablaPaises + " ( " +
+    public static final String CreateTablaPaises = "CREATE TABLE " + TablaPaises + " ( " +
             "id INTEGER PRIMARY KEY AUTOINCREMENT, pais TEXT, ext TEXT )";
 
     public static final String SelectAllPaises = "SELECT * FROM " + TablaPaises;
