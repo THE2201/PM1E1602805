@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PM1E1602805</string>
+    <string name="btnbuscar">Volver</string>
+    <string name="btnRegresar">Regresar</string>
+    <string name="btnCompartir">Compartir</string>
+    <string name="btnVer">Ver Contacto\n</string>
+    <string name="btnEliminar">Eliminar</string>
+    <string name="btnActualizar">Actualizar\n</string>
+
 </resources>
