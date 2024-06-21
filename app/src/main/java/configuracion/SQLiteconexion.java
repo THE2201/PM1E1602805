@@ -8,16 +8,13 @@ import androidx.annotation.Nullable;
 
 public class SQLiteconexion   extends  SQLiteOpenHelper {
 
-
     public SQLiteconexion(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
