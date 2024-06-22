@@ -68,12 +68,10 @@ public class MainActivity extends AppCompatActivity {
         nota = (EditText) findViewById(R.id.nota);
         imageView = (ImageView) findViewById(R.id.imageView);
 
-        btnLista = (Button) findViewById(R.id.btnLista);
-        btnGuardar = (Button) findViewById(R.id.btnGuardar);
-        btnAgregarPais = (Button) findViewById(R.id.btnAgregarPais);
-        btnCapturar = (Button)  findViewById(R.id.btnCapturar);
+
         
         Intent intent = getIntent();
+
         if(intent.getExtras() != null){
             idContacto = intent.getStringExtra("Id");
             extPaisSel = intent.getStringExtra("Pais");
@@ -89,15 +87,13 @@ public class MainActivity extends AppCompatActivity {
                 VerImagen(img64);
             }
         }
-        
 
-        btnLista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ListaActivity.class);
-                startActivity(intent);
-            }
-        });
+
+        btnLista = (Button) findViewById(R.id.btnLista);
+        btnGuardar = (Button) findViewById(R.id.btnGuardar);
+        btnAgregarPais = (Button) findViewById(R.id.btnAgregarPais);
+        btnCapturar = (Button)  findViewById(R.id.btnCapturar);
+
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,6 +104,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent send = new Intent(MainActivity.this, ListaActivity.class);
+                startActivity(send);
+            }
+        });
+
         btnAgregarPais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

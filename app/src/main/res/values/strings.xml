@@ -1,17 +1,16 @@
 <resources>
     <string name="app_name">PM1E1602805</string>
     <string name="tagCapturar">Capturar</string>
-    <string name="btnGuardar">Guardar</string>
-    <string name="btnLista">Ver lista</string>
+    <string name="btnGuardar">Salvar Contacto</string>
+    <string name="btnLista">Contactos Guardados</string>
     <string name="tagNombre">Nombre</string>
     <string name="tagNota">Agregar nota</string>
     <string name="btnbuscar">Volver</string>
     <string name="btnRegresar">Regresar</string>
     <string name="btnCompartir">Compartir</string>
-    <string name="btnVer">Ver Contacto\n</string>
+    <string name="btnVer">Ver Imagen</string>
     <string name="btnEliminar">Eliminar</string>
     <string name="btnActualizar">Actualizar\n</string>
     <string name="txtCodPais">Extension</string>
     <string name="txtPais">Pais</string>
-    <string name="pruebita">prueba</string>
 </resources>

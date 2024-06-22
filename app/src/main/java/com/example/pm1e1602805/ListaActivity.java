@@ -149,9 +149,9 @@ public class ListaActivity extends AppCompatActivity {
                         //Basicamente crea un alert pero de la imagen
                         AlertDialog.Builder imagenbuilder = new AlertDialog.Builder(ListaActivity.this);
                         LayoutInflater inflater = LayoutInflater.from(ListaActivity.this);
-                        View verfotocontacto = inflater.inflate(R.layout.foto, null);
+                        View verfotocontacto = inflater.inflate(R.layout.foto_contacto, null);
 
-                        ImageView imageView = verfotocontacto.findViewById(R.id.imagencontacto);
+                        ImageView imageView = verfotocontacto.findViewById(R.id.imgFotoContacto);
                         imageView.setImageBitmap(bitmap);
 
                         imagenbuilder.setView(verfotocontacto);
@@ -180,9 +180,9 @@ public class ListaActivity extends AppCompatActivity {
             public boolean onDoubleTap(MotionEvent e) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(ListaActivity.this);
-                builder.setTitle("¿Llamar a: " + contactoSeleccionado.getNombre() + "?")
-                        .setMessage("¿Desea llamar a este contacto? +" + " " + contactoSeleccionado.getPais() + " " + contactoSeleccionado.getTelefono())
-                        .setPositiveButton("Llamar", new DialogInterface.OnClickListener() {
+                builder.setTitle("Accion")
+                        .setMessage("Desea llamar a " + contactoSeleccionado.getNombre() )
+                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 String tel = contactoSeleccionado.getTelefono();
@@ -267,12 +267,12 @@ public class ListaActivity extends AppCompatActivity {
     private void Actualizar() {
         Intent intent = new Intent(ListaActivity.this, MainActivity.class);
 
-        intent.putExtra("id", contactoSeleccionado.getId().toString());
-        intent.putExtra("pais", contactoSeleccionado.getPais());
-        intent.putExtra("nombre", contactoSeleccionado.getNombre());
-        intent.putExtra("telefono", contactoSeleccionado.getTelefono());
-        intent.putExtra("nota", contactoSeleccionado.getNota());
-        intent.putExtra("imagen", contactoSeleccionado.getImagen());
+        intent.putExtra("Id", contactoSeleccionado.getId().toString());
+        intent.putExtra("Pais", contactoSeleccionado.getPais());
+        intent.putExtra("Nombre", contactoSeleccionado.getNombre());
+        intent.putExtra("Telefono", contactoSeleccionado.getTelefono());
+        intent.putExtra("Nota", contactoSeleccionado.getNota());
+        intent.putExtra("Imagen", contactoSeleccionado.getImagen());
         startActivity(intent);
     }
 
