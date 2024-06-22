@@ -11,7 +11,7 @@
     <string name="btnVer">Ver Contacto\n</string>
     <string name="btnEliminar">Eliminar</string>
     <string name="btnActualizar">Actualizar\n</string>
-    <string name="txtCodPais">Ingrese Código</string>
-    <string name="txtPais">Ingrese País</string>
+    <string name="txtCodPais">Extension</string>
+    <string name="txtPais">Pais</string>
     <string name="pruebita">prueba</string>
 </resources>
