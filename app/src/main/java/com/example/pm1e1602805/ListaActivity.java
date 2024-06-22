@@ -73,7 +73,7 @@ public class ListaActivity extends AppCompatActivity {
 
         conexion = new SQLiteconexion(this, TransContactos.DBname, null, TransContactos.Version);
         listcontactos = (ListView) findViewById(R.id.listacontactos);
-
+        ObtenerlistContactos();
 
         //Regresar a pantalla inicial
         btnRegresar = findViewById(R.id.btnRegresar);
@@ -236,8 +236,8 @@ public class ListaActivity extends AppCompatActivity {
         while (cursor.moveToNext()) {
 
             HashMap<String, String> result = new HashMap<>();
-            result.put("First Line", cursor.getString(1));
-            result.put("Second Line", cursor.getString(2));
+            result.put("First Line", cursor.getString(2));
+            result.put("Second Line", cursor.getString(3));
             items.add(result);
 
             contactos = new Contactos();
