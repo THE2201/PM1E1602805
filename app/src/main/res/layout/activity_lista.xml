@@ -1,45 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ListaActivity">
 
-    <Button
+
+    <ImageButton
         android:id="@+id/btnRegresar"
-        android:layout_width="123dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#FFFEFE"
-        android:text="@string/btnRegresar"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
+        android:layout_width="67dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="#9E7752BC"
+        android:contentDescription="@string/btnRegresar"
+        android:paddingLeft="10dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <SearchView
         android:id="@+id/txtSearch"
         android:layout_width="0dp"
         android:layout_height="37dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/searchview_border"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegresar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegresar"
+        />
 
     <ListView
         android:id="@+id/listacontactos"
-        android:layout_width="377dp"
-        android:layout_height="411dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="418dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
+
+        style="@style/SearchViewStyle"
         app:layout_constraintTop_toBottomOf="@+id/txtSearch" />
 
     <Button
@@ -49,8 +60,9 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="#0648ED"
+        android:backgroundTint="#9E2CB6AA"
         android:text="@string/btnCompartir"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toStartOf="@+id/btnVer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listacontactos" />
@@ -62,12 +74,17 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="#0648ED"
-        android:insetTop="4dp"
+        android:backgroundTint="#9E2CB6AA"
+        android:foregroundTint="#2196F3"
+        android:freezesText="false"
+        android:paddingTop="14dp"
         android:text="@string/btnVer"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnActualizar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCompartir"
-        app:layout_constraintTop_toBottomOf="@+id/listacontactos" />
+        app:layout_constraintTop_toBottomOf="@+id/listacontactos"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btnEliminar"
@@ -76,8 +93,9 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="#0648ED"
+        android:backgroundTint="#9E2CB6AA"
         android:text="@string/btnEliminar"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toStartOf="@+id/btnActualizar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCompartir" />
@@ -87,12 +105,23 @@
         android:layout_width="187dp"
         android:layout_height="53dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="#0648ED"
+        android:backgroundTint="#9E2CB6AA"
+        android:paddingTop="12dp"
         android:text="@string/btnActualizar"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnEliminar"
         app:layout_constraintTop_toBottomOf="@+id/btnVer" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
