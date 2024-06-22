@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.GestureDetector;
@@ -24,7 +24,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -53,8 +53,8 @@ public class ListaActivity extends AppCompatActivity {
     ArrayList<String> arreglo;
     String idC = "0";
     Contactos contactoSeleccionado;
-    Button btnVer, btnEliminar, btnCompartir, btnActualizar;
-    ImageButton btnRegresar;
+    Button btnRegresar,btnVer, btnEliminar, btnCompartir, btnActualizar;
+
 
     ArrayList<Contactos> contactos;
 
