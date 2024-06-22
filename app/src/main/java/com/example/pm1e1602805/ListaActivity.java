@@ -22,7 +22,7 @@ import android.net.Uri;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SearchView;
+
 import android.widget.SimpleAdapter;
 
 import android.widget.Toast;
@@ -48,17 +48,16 @@ public class ListaActivity extends AppCompatActivity {
 
     SQLiteconexion conexion;
     SimpleAdapter adp;
-    SearchView txtSearch;
     ListView listcontactos;
     GestureDetector gestureDetector;
     ArrayList<Contactos> lista;
-    ArrayList<String> arreglo;
     String idC = "0";
     Contactos contactoSeleccionado;
     Button btnVer, btnEliminar, btnCompartir, btnActualizar;
     ImageButton btnRegresar;
 
-    ArrayList<Contactos> contactos;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,9 +14,9 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Paises"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/spinnerPaises"
         app:layout_constraintTop_toBottomOf="@+id/btnCapturar" />
@@ -46,6 +47,9 @@
         android:layout_width="60sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:backgroundTint="#9E2CB6AA"
+
+        app:cornerRadius="10dp"
         app:icon="@drawable/agregar_ic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
@@ -56,9 +60,12 @@
         android:id="@+id/btnCapturar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#9E2CB6AA"
         android:text="@string/tagCapturar"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -67,9 +74,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:contentDescription="Nombre"
         android:ems="10"
         android:hint="@string/tagNombre"
         android:inputType="text"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerPaises" />
@@ -79,8 +88,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:contentDescription="Agregar"
         android:ems="10"
+        android:hint="Telefono"
         android:inputType="number"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombre" />
@@ -90,9 +102,11 @@
         android:layout_width="280sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:contentDescription="Agregar"
         android:ems="10"
         android:hint="@string/tagNota"
         android:inputType="text"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,20 +114,24 @@
 
     <Button
         android:id="@+id/btnGuardar"
-        android:layout_width="300sp"
-        android:layout_height="50dp"
+        android:layout_width="303dp"
+        android:layout_height="52dp"
         android:layout_marginTop="30dp"
+        android:backgroundTint="#9E2CB6AA"
         android:text="@string/btnGuardar"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nota" />
 
     <Button
         android:id="@+id/btnLista"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="303dp"
+        android:layout_height="51dp"
         android:layout_marginTop="10dp"
+        android:backgroundTint="#9E2CB6AA"
         android:text="@string/btnLista"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
