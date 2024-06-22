@@ -149,9 +149,9 @@ public class ListaActivity extends AppCompatActivity {
                         //Basicamente crea un alert pero de la imagen
                         AlertDialog.Builder imagenbuilder = new AlertDialog.Builder(ListaActivity.this);
                         LayoutInflater inflater = LayoutInflater.from(ListaActivity.this);
-                        View verfotocontacto = inflater.inflate(R.layout.activity_main, null);
+                        View verfotocontacto = inflater.inflate(R.layout.foto, null);
 
-                        ImageView imageView = verfotocontacto.findViewById(R.id.imageView);
+                        ImageView imageView = verfotocontacto.findViewById(R.id.imagencontacto);
                         imageView.setImageBitmap(bitmap);
 
                         imagenbuilder.setView(verfotocontacto);
