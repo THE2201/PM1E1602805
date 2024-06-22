@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.net.Uri;
-import android.widget.EditText;
+
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -37,6 +37,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import configuracion.Contactos;
 import configuracion.SQLiteconexion;
@@ -53,8 +55,8 @@ public class ListaActivity extends AppCompatActivity {
     ArrayList<String> arreglo;
     String idC = "0";
     Contactos contactoSeleccionado;
-    Button btnRegresar,btnVer, btnEliminar, btnCompartir, btnActualizar;
-
+    Button btnVer, btnEliminar, btnCompartir, btnActualizar;
+    ImageButton btnRegresar;
 
     ArrayList<Contactos> contactos;
 
@@ -111,7 +113,7 @@ public class ListaActivity extends AppCompatActivity {
                 if (idC == "0") {
                     Toast.makeText(getApplicationContext(), "Seleccione un contacto", Toast.LENGTH_LONG).show();
                 } else {
-                    Eliminar();
+                    EliminarMensaje();
                 }
             }
         });
@@ -129,22 +131,6 @@ public class ListaActivity extends AppCompatActivity {
             }
         });
 
-        //Buscar Contacto
-
-        txtSearch = findViewById(R.id.txtSearch);
-
-        txtSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String texto) {
-                adp.getFilter().filter(texto);
-                return false;
-            }
-        });
 
         //Ver imagen en un AlertDialog
         btnVer = findViewById(R.id.btnVer);
@@ -241,7 +227,19 @@ public class ListaActivity extends AppCompatActivity {
 
         Cursor cursor = db.rawQuery(TransContactos.SelectAllContacts, null);
 
+        List<HashMap<String, String>> items = new ArrayList<>();
+        adp = new SimpleAdapter(this, items, R.layout.listcontact_items,
+                new String[]{"First Line", "Second Line"},
+                new int[]{R.id.txtItems, R.id.txtSubItems});
+
+
         while (cursor.moveToNext()) {
+
+            HashMap<String, String> result = new HashMap<>();
+            result.put("First Line", cursor.getString(1));
+            result.put("Second Line", cursor.getString(2));
+            items.add(result);
+
             contactos = new Contactos();
             contactos.setId(cursor.getInt(0));
             contactos.setPais(cursor.getString(1));
@@ -252,18 +250,10 @@ public class ListaActivity extends AppCompatActivity {
             lista.add(contactos);
         }
         listcontactos.setAdapter(adp);
-        
-        FillData();
-    }
-
-    private void FillData() {
-        arreglo =new ArrayList<>();
-        for(int i=0;i<lista.size();i++){
-            arreglo.add(lista.get(i).getNombre() + "\n"
-                    + lista.get(i).getTelefono());
-        }
 
     }
+
+
 
 
     private void Eliminar() {
