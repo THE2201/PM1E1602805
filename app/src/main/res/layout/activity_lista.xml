@@ -9,35 +9,16 @@
     tools:context=".ListaActivity">
 
 
-    <ImageButton
-        android:id="@+id/btnRegresar"
-        android:layout_width="67dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="1dp"
-        android:backgroundTint="#9E2CB6AA"
-        android:contentDescription="@string/btnRegresar"
-        android:paddingLeft="10dp"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtSearch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
-
     <SearchView
         android:id="@+id/txtSearch"
         android:layout_width="0dp"
         android:layout_height="37dp"
-        android:layout_marginTop="28dp"
         android:background="@drawable/searchview_border"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegresar"
-        />
+        tools:layout_editor_absoluteY="82dp" />
 
     <ListView
         android:id="@+id/listacontactos"
@@ -121,6 +102,14 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/txtSearch"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,8 +53,8 @@ public class ListaActivity extends AppCompatActivity {
     ArrayList<Contactos> lista;
     String idC = "0";
     Contactos contactoSeleccionado;
-    Button btnVer, btnEliminar, btnCompartir, btnActualizar;
-    ImageButton btnRegresar;
+    Button btnRegresar,btnVer, btnEliminar, btnCompartir, btnActualizar;
+
 
 
 
